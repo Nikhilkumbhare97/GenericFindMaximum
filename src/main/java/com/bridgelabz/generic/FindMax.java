@@ -2,35 +2,13 @@ package com.bridgelabz.generic;
 
 public class FindMax {
 
-    public Integer findMaxInt(Integer firstPosition, Integer secondPosition, Integer thirdPosition) {
-        Integer max = firstPosition;
-        if (secondPosition.compareTo(max) > 0) {
-            max = secondPosition;
+    public <E extends Comparable<E>> E findMax(E value1, E value2, E value3) {
+        E max = value1;
+        if (value2.compareTo(max) > 0) {
+            max = value2;
         }
-        if (thirdPosition.compareTo(max) > 0) {
-            max = thirdPosition;
-        }
-        return max;
-    }
-
-    public Float findMaxFloat(Float firstPosition, Float secondPosition, Float thirdPosition) {
-        Float max = firstPosition;
-        if (secondPosition.compareTo(max) > 0) {
-            max = secondPosition;
-        }
-        if (thirdPosition.compareTo(max) > 0) {
-            max = thirdPosition;
-        }
-        return max;
-    }
-
-    public String findMaxString(String firstPosition, String secondPosition, String thirdPosition) {
-        String max = firstPosition;
-        if (secondPosition.compareTo(max) > 0) {
-            max = secondPosition;
-        }
-        if (thirdPosition.compareTo(max) > 0) {
-            max = thirdPosition;
+        if (value3.compareTo(max) > 0) {
+            max = value3;
         }
         return max;
     }
