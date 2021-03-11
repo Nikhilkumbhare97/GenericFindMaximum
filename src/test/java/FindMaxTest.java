@@ -12,25 +12,31 @@ public class FindMaxTest {
         maxOperation = new FindMax();
     }
 */
+@Test
+public void givenThreeIntegerNumber_ShouldReturnMaximumValue() {
+    Integer[] intNum = { 6, 2, 1, 11, 20 } ;
+    maxOperation = new FindMax();
+    Integer maxInteger = maxOperation.findMax(intNum);
+    maxOperation.printMax(maxInteger) ;
+    Assert.assertEquals( Integer.valueOf(20),  maxInteger);
+}
+
     @Test
-    public void givenThreeIntegers_ShouldReturnMaximumValue() {
-        maxOperation = new FindMax(7, 3, 5);
-        Integer maxInteger = (Integer) maxOperation.maxFind();
-        Assert.assertEquals(Integer.valueOf(7), maxInteger);
+    public void givenThreeFloatNumber_ShouldReturnMaximumValue() {
+        Float[] floatNum = { 6.1f, 2.8f, 4.6f, 1.1f, 9.8f } ;
+        maxOperation = new FindMax();
+        Float maxFloat = maxOperation.findMax(floatNum);
+        maxOperation.printMax(maxFloat) ;
+        Assert.assertEquals( Float.valueOf(9.8f),  maxFloat);
     }
 
     @Test
-    public void givenThreeFloats_ShouldReturnMaximumValue() {
-        maxOperation = new FindMax(7.4f, 8.9f, 5.5f);
-        Float maxFloat = (Float) maxOperation.maxFind();
-        Assert.assertEquals(Float.valueOf(8.9f), maxFloat);
-    }
-
-    @Test
-    public void givenThreeString_ShouldReturnMaximumValue() {
-        maxOperation = new FindMax("Papaya", "Apple", "WaterMelon");
-        String maxString = (String) maxOperation.maxFind();
-        Assert.assertEquals("WaterMelon", maxString);
+    public void givenThreeStrings_ShouldReturnMaximumString() {
+        String[] string = { " apple", " watermelon ", " orange " } ;
+        maxOperation = new FindMax();
+        String maxString = maxOperation.findMax(string);
+        maxOperation.printMax(maxString) ;
+        Assert.assertEquals( " watermelon ",  maxString);
     }
 
 }
